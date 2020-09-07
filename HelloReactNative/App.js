@@ -168,6 +168,7 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: 18,
     fontWeight: 'bold',
+    fontFamily: 'Inter',
     marginLeft: 18,
     marginTop: 7.5
   },
@@ -195,7 +196,7 @@ const styles = StyleSheet.create({
     color: 'white',
     lineHeight: 24,
     fontWeight: 'bold',
-    fontFamily: 'Inter',
+    fontFamily: 'Inter'
   },
   
   settingsText: {
