@@ -10,6 +10,7 @@ import React, { useState } from 'react';
 import {
   SafeAreaView,
   StyleSheet,
+  Dimensions,
   ScrollView,
   View,
   Text,
@@ -40,11 +41,22 @@ const App: () => React$Node = () => {
     <>
       <SafeAreaView style={styles.container}>
         <View style={styles.mapToolbar}>
-        
+          <View style={styles.mapToolbarButtonContainer}>
+            <View style={styles.mapToolbarButton}>
+            
+            </View>
+            <View style={styles.mapToolbarButton}>
+            
+            </View>
+          </View>
+          <View style={styles.searchBar}>
+          
+          </View>
         </View>
         <ScrollView
           style={styles.pageButtons}
           contentInsetAdjustmentBehavior="automatic"
+          showsHorizontalScrollIndicator={false}
           horizontal={true}
           scrollEnabled={true}
         >
@@ -124,8 +136,30 @@ const styles = StyleSheet.create({
   },
   
   mapToolbar: {
-    //backgroundColor: 'green',
     height: 110,
+    width: Dimensions.get('window').width - 40,
+    marginLeft: 20,
+    marginRight: 20,
+    marginBottom: 22
+  },
+  
+  mapToolbarButtonContainer: {
+    flex: 1,
+    flexDirection: 'row'
+  },
+  
+  mapToolbarButton: {
+    width: 44,
+    height: 44,
+    backgroundColor: '#4F4F4F',
+    borderRadius: 4,
+    marginRight: 18
+  },
+  
+  searchBar: {
+    height: 44,
+    backgroundColor: '#4F4F4F',
+    borderRadius: 7
   },
   
   pageButtons: {
