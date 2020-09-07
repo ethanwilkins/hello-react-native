@@ -50,7 +50,9 @@ const App: () => React$Node = () => {
             </View>
           </View>
           <View style={styles.searchBar}>
-          
+            <Text style={styles.searchBarText}>
+              Search
+            </Text>
           </View>
         </View>
         <ScrollView
@@ -160,6 +162,14 @@ const styles = StyleSheet.create({
     height: 44,
     backgroundColor: '#4F4F4F',
     borderRadius: 7
+  },
+  
+  searchBarText: {
+    color: 'white',
+    fontSize: 18,
+    fontWeight: 'bold',
+    marginLeft: 18,
+    marginTop: 7.5
   },
   
   pageButtons: {
