@@ -194,7 +194,8 @@ const styles = StyleSheet.create({
     fontSize: 24,
     color: 'white',
     lineHeight: 24,
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    fontFamily: 'Inter',
   },
   
   settingsText: {
