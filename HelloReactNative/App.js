@@ -14,6 +14,7 @@ import {
   ScrollView,
   View,
   Text,
+  Image,
   Alert,
   StatusBar,
   TouchableOpacity
@@ -40,10 +41,13 @@ const App: () => React$Node = () => {
   return (
     <>
       <SafeAreaView style={styles.container}>
+        <Image
+          source={require('./assets/images/home.png')}
+          style={styles.mockupMapImg}
+        />
         <View style={styles.mapToolbar}>
           <View style={styles.mapToolbarButtonContainer}>
             <View style={styles.mapToolbarButton}>
-            
             </View>
             <View style={styles.mapToolbarButton}>
             
@@ -131,6 +135,13 @@ const App: () => React$Node = () => {
 };
 
 const styles = StyleSheet.create({
+  mockupMapImg: {
+    width: '105%',
+    resizeMode: 'contain',
+    position: 'absolute',
+    top: -(Dimensions.get('window').width / 1)
+  },
+  
   container: {
     flex: 1,
     flexDirection: 'column',
@@ -196,7 +207,7 @@ const styles = StyleSheet.create({
     color: 'white',
     lineHeight: 24,
     fontWeight: 'bold',
-    fontFamily: 'Inter'
+    fontFamily: 'Inter' // Custom fonts not currently working for Android
   },
   
   settingsText: {
