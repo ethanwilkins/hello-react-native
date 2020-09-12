@@ -45,12 +45,19 @@ const App: () => React$Node = () => {
           source={require('./assets/images/home.png')}
           style={styles.mockupMapImg}
         />
-        <View style={styles.mapToolbar}>
-          <View style={styles.mapToolbarButtonContainer}>
-            <View style={styles.mapToolbarButton}>
+        <View style={styles.toolbar}>
+          <View style={styles.toolbarButtonContainer}>
+            <View style={[styles.toolbarButton, styles.toolbarButtonActive]}>
+              <Image
+                source={require('./assets/images/hotspotIcon.png')}
+                style={styles.hotspotIcon}
+              />
             </View>
-            <View style={styles.mapToolbarButton}>
-            
+            <View style={styles.toolbarButton}>
+              <Image
+                source={require('./assets/images/locationsIcon.png')}
+                style={styles.locationsIcon}
+              />
             </View>
           </View>
           <View style={styles.searchBar}>
@@ -148,7 +155,7 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end'
   },
   
-  mapToolbar: {
+  toolbar: {
     height: 110,
     width: Dimensions.get('window').width - 40,
     marginLeft: 20,
@@ -156,17 +163,38 @@ const styles = StyleSheet.create({
     marginBottom: 22
   },
   
-  mapToolbarButtonContainer: {
+  toolbarButtonContainer: {
     flex: 1,
     flexDirection: 'row'
   },
   
-  mapToolbarButton: {
+  toolbarButton: {
     width: 44,
     height: 44,
     backgroundColor: '#4F4F4F',
     borderRadius: 4,
     marginRight: 18
+  },
+  
+  toolbarButtonActive: {
+    backgroundColor: '#F2F2F2',
+    borderWidth: 3,
+    borderColor: '#333333'
+  },
+  
+  hotspotIcon: {
+    width: 10,
+    height: 22,
+    alignSelf: 'center',
+    marginTop: 8
+  },
+  
+  locationsIcon: {
+    width: 24.84,
+    height: 14.98,
+    alignSelf: 'center',
+    resizeMode: 'stretch',
+    marginTop: 13.75
   },
   
   searchBar: {
