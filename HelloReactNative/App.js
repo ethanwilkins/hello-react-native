@@ -15,9 +15,7 @@ import {
   View,
   Text,
   Image,
-  Alert,
-  StatusBar,
-  TouchableOpacity
+  Alert
 } from 'react-native';
 
 // To have geolocation API aligned with the browser (cross-platform apps), or to support backward compatibility
